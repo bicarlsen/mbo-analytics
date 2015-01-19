@@ -1,0 +1,56 @@
+/* Global LESS File */
+/* CSS to be included in every file */
+/* Variables */
+/* Global */
+html,
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #555555;
+}
+/* Header */
+header {
+  position: relative;
+  /* Navigation */
+}
+header div {
+  display: inline-block;
+}
+header nav {
+  position: absolute;
+  right: 2em;
+  top: 1em;
+}
+header nav ul {
+  list-style: none;
+}
+header nav ul.main-menu > li {
+  display: inline-block;
+  margin: 0.3em 0;
+  padding: 0.2em 0.5em;
+  font-size: 1.5em;
+  background-color: #555555;
+}
+header nav ul.main-menu > li a {
+  color: #000000;
+}
+header nav ul.main-menu > li:hover {
+  background-color: #959595;
+}
+header form {
+  display: inline-block;
+}
+/* Images */
+img.thumbnail {
+  width: 60px;
+  height: 60px;
+}
+/* Form */
+form .ng-dirty.ng-valid {
+  border-color: green;
+}
+form .ng-dirty.ng-invalid {
+  border-color: red;
+}

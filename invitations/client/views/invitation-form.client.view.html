@@ -1,0 +1,23 @@
+<div data-ng-show='inviteCtrl.thankyou'>
+	<h2>Thank You for Signing Up.</h2>
+	<p>
+		We are working with our current members to bring you the most sought after reports first.
+		Because of all the input we're receiving we have limited the number of sign ups until everything is up and running.
+		When everything is ready to go, we'll send you an email at {{ inviteCtrl.email }}. Until then, happy reporting!
+</div>
+
+<div data-ng-hide='inviteCtrl.thankyou'>
+	<h2>Sign Up Now</h2>
+	<div class='error text-danger' ng-show='inviteCtrl.error.message'>
+		{{ inviteCtrl.error.message }}
+	</div>
+	<form name='inviteForm' class='form-inline' data-ng-submit='inviteForm.$valid && inviteCtrl.submit( email )' novalidate>
+		<fieldset class='form-group'>
+			<label class='sr-only' for='inviteEmail'>Email</label>
+			<input type='email' id='inviteEmail' class='form-control' data-ng-class="inviteCtrl.error.type" placeholder='Enter Your Email...' data-ng-model='email' required />
+		</fieldset>
+		<fieldset class='form-group'>
+			<input class='btn btn-primary' type='submit' value='Request Invitation'>
+		</fieldset>
+	</form>
+</div>

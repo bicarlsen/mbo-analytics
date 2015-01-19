@@ -1,0 +1,20 @@
+<div data-ng-controller='ProfilesController'>
+	<div>
+		<h2>My Info</h2>
+		<div data-ng-include="'users/client/views/profile.client.view.html'" data-ng-hide='activeForms.user'></div>
+		<div data-ng-include="'users/client/views/profile_form.client.view.html'" data-ng-show='activeForms.user'></div>
+	</div>
+	<div>
+		<h2>Company Info</h2>
+		<div data-ng-include="'companies/client/views/profile.client.view.html'" data-ng-hide='activeForms.company'></div>
+		<div data-ng-include="'companies/client/views/profile_form.client.view.html'" data-ng-show='activeForms.company'></div>
+	</div>
+
+	<div>
+		<h2>Account Settings</h2>
+		Plan type, Billing Options, etc.
+	</div>
+</div>
+
+<script src='users/client/profiles.client.module.js' type='text/javascript'></script>
+<script src='users/client/controllers/profiles.client.controller.js' type='text/javascript'></script>

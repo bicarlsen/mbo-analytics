@@ -1,0 +1,15 @@
+<% for( var i in messages ) { %>
+	<div class='flash'>
+		<%= messages[i] %>
+	</div>
+<% } %>
+<form action='/signin' method='post'>
+	<div>
+		<input type='text' name='username' placeholder='Email...' />
+		<input type='password' name='password' placeholder='Password...' />
+	</div>
+	<div>
+		<input type='submit' value='Sign In' />
+		<a href='/'>Home</a>
+	</div>
+</form>

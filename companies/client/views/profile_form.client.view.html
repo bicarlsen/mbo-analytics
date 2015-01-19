@@ -1,0 +1,15 @@
+<form data-ng-submit='updateCompany()'> 
+	<fieldset>
+		<input type='text' name='name' placeholder='Company Name...' data-ng-model='temp.company.name' />
+	</fieldset>
+	<fieldset>
+		<input type='text' name='mboUsername' placeholder='MINDBODY Username' data-ng-model='temp.company.mboUsername' />
+	</fieldset>
+	<fieldset>
+		<input type='text' name='mboPassword' placeholder='MINDBODY Password' data-ng-model='temp.company.mboPassword' />
+	</fieldset>
+	<fieldset>
+		<input type='submit' value='Save Changes' />
+		<button data-ng-click="cancel( 'company' )">Cancel</button>
+	</fieldset>
+</form>

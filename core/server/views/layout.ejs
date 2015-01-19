@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+	<title><%= ( typeof title != "undefined")? title : "MBO Reports" %></title>
+	<link rel="icon" type="image/png" href="core/client/img/logo.png" alt="logo">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='core/client/css/global.css'>
+</head>
+<body <%= ( typeof ngApp === "undefined" )? "" : ( "data-ng-app=" + ngApp ) %>>
+	<header>
+		<img class='thumbnail' src='core/client/img/logo.png' alt='logo' />
+		
+		<% include navigation.ejs %>
+	</header>
+	<div id='main'>
+		<%- body %>
+	</div>
+	<footer>
+		<% include footer.ejs %>
+	</footer>
+	
+	
+	<!-- Angular Scripts -->
+	<script src='core/client/lib/angular/angular.js' type='text/javascript'></script>
+	<script src='core/client/lib/angular-route/angular-route.js' type='text/javascript'></script>
+	<script src='core/client/lib/angular-resource/angular-resource.js' type='text/javascript'></script>
+	
+	<%- script %>
+	
+	<% if ( typeof ngApp === "undefined" ) { %> 
+		<script src='core/client/application.js' type='text/javascript'></script>
+	<% } %>
+	
+</body>
+</html>

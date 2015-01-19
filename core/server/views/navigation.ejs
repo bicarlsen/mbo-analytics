@@ -1,0 +1,23 @@
+<div>
+<% if ( typeof user !== "undefined" && user ) { %>
+	<nav>
+		<ul class='main-menu'>
+			<li><a href='/reports'>Reports</a></li>
+			<li><a href='/profile'>Profile</a></li>
+			<li><a href='/tools'>Tools</a></li>
+			<li><a href='/signout'>Sign Out</a></li>
+		</ul>
+	</nav>
+<% } else { %>
+	<a href='/signup' class='btn btn-primary'>Sign Up</a>
+	<form action='/signin' method='post' class='form-inline'>
+		<fieldset class='form-group'>
+			<input type='text' name='username' class='form-control' placeholder='Email...' />
+			<input type='password' name='password' class = 'form-control' placeholder='Password...' />
+		</fieldset>
+		<fieldset class='form-group'>
+			<input class='btn btn-default' type='submit' value='Sign In' />
+		</fieldset>
+	</form>
+<% } %>
+</div>

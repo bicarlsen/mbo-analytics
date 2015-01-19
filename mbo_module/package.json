@@ -1,0 +1,17 @@
+{
+  "name": "mbo-services",
+  "version": "0.0.1",
+  "description": "Provides API services to MindBody Online.",
+  "main": "mbo.js",
+	"dependencies": {
+		"mbo-api": "~0.0.1"
+	},
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Carlsen",
+  "license": "ISC"
+}

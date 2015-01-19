@@ -1,0 +1,13 @@
+<form data-ng-submit='updateUser()'> 
+	<div>
+		<input type='text' name='firstName' placeholder='First Name...' data-ng-model='temp.user.firstName' />
+		<input type='text' name='lastName' placeholder='Last Name...' data-ng-model='temp.user.lastName' />
+	</div>
+	<div>
+		<input type='text' name='email' placeholder='Email...' data-ng-model='temp.user.email' />
+	</div>
+	<div>
+		<input type='submit' value='Save Changes' />
+		<button data-ng-click="cancel( 'user' )">Cancel</button>
+	</div>
+</form>
