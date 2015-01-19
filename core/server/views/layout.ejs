@@ -2,21 +2,31 @@
 <html xmlns:ng="http://angularjs.org">
 <head>
 	<title><%= ( typeof title != "undefined")? title : "MBO Reports" %></title>
-	<link rel="icon" type="image/png" href="core/client/img/logo.png" alt="logo">
+
+	<!-- Modified for Brochure site -->
+	<link rel="icon" type="image/png" href="core/client/img/brochure-logo-ico.png" alt="logo">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-	<link rel='stylesheet' type='text/css' href='core/client/css/global.css'>
+
+	<!-- Modified for Brochure site -->
+	<link rel='stylesheet' type='text/css' href='core/client/css/brochure.css' media="(min-width: 800px)">
+	<link rel='stylesheet' type='text/css' href='core/client/css/brochure-mobile.css' media="(max-width: 800px)">
 </head>
 <body <%= ( typeof ngApp === "undefined" )? "" : ( "data-ng-app=" + ngApp ) %>>
 	<header>
-		<img class='thumbnail' src='core/client/img/logo.png' alt='logo' />
+		<!-- Removed for Brochure site -->
+		<!-- <img class='thumbnail' src='core/client/img/logo.png' alt='logo' /> -->
 		
-		<% include navigation.ejs %>
+		<!-- Removed for Brochure site -->
+		<!-- <% include navigation.ejs %> -->
 	</header>
 	<div id='main'>
 		<%- body %>
 	</div>
 	<footer>
-		<% include footer.ejs %>
+		<!-- Removed for Brochure site -->
+		<!-- <% include footer.ejs %> -->
+		Have Questions?<br />
+		Contact Us at <a href='mailto:info@mboreports.com'>info@mboreports.com</a>
 	</footer>
 	
 	
